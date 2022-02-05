@@ -5,37 +5,10 @@ import java.util.*;
 public class Graph {
 
 
-    /*private Map<Vertices, Integer> numberOfUsageOfVertices = new HashMap<>();
-    private Map<Edge, List<Vertices>> graph = new HashMap<>();*/
-
     private List<Edge> nextVisitEdgeList = new ArrayList<>();
     private Map<Edge, Boolean> edgesHaveVisited = new HashMap<>();
 
     private Map<Edge, Boolean> dfsEdgesHaveVisited = new HashMap<>();
-
-
-    /*public boolean addEdge(Edge edge, Vertices vertices){
-
-        List<Vertices> verticesList = new ArrayList<>();
-        verticesList.add(vertices);
-            graph.put(edge, verticesList);
-
-        if(numberOfUsageOfVertices.get(vertices) == null)
-            numberOfUsageOfVertices.put(vertices, 0);
-        else
-            numberOfUsageOfVertices.put(vertices, numberOfUsageOfVertices.get(vertices) + 1);
-        return true;
-    }*/
-
-   /* public boolean addEdge(String label, Vertices vertices){
-
-        if(numberOfUsageOfVertices.containsKey(vertices) && numberOfUsageOfVertices.get(vertices) > 2)
-            return false;
-
-        addEdge(new Edge(label), vertices);
-
-        return true;
-    }*/
 
     public Boolean connectEdges(Edge edgeA, Edge edgeB, Vertices vertices){
 
@@ -46,11 +19,6 @@ public class Graph {
         return true;
     }
 
-/*
-    public Map<Edge, List<Vertices>> getGraph() {
-        return graph;
-    }
-*/
 
     /*
     start: is an edge from where we need to start searching
@@ -112,8 +80,6 @@ public class Graph {
                     return desiredEdge;
             }
         }
-
-
         return null;
     }
 
